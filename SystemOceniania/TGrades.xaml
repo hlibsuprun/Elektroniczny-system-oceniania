@@ -1,0 +1,56 @@
+﻿<Window x:Class="SystemOceniania.TGrades"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SystemOceniania"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="TGrades" Height="450" Width="800">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
+            <TextBlock FontSize="24" FontWeight="Bold" Text="Grades" FontFamily="Gill Sans MT" Margin="10"/>
+        </StackPanel>
+        <Border Background="#ffdadada" Width="200" VerticalAlignment="Stretch" HorizontalAlignment="Left">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
+                <TextBlock Text="Navigation" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold" FontFamily="Gill Sans MT" Margin="10"/>
+                <StackPanel Orientation="Horizontal" Margin="0,10">
+                    <materialDesign:PackIcon Kind="Home" Height="34" Width="30" Margin="0,0,5,0"/>
+                    <Button Content="Home" Click="Home_Click" FontFamily="Gill Sans MT" FontWeight="Bold" Background="Maroon"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10">
+                    <materialDesign:PackIcon Kind="Grade" Height="34" Width="30" Margin="0,0,5,0"/>
+                    <Button Content="Add Grades" Click="Add_Grade_Click" FontFamily="Gill Sans MT" FontWeight="Bold" Background="Maroon"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10">
+                    <materialDesign:PackIcon Kind="Teacher" Height="34" Width="30" Margin="0,0,5,0"/>
+                    <Button Content="Add Schedule" Click="Add_Schedule_Click" FontFamily="Gill Sans MT" FontWeight="Bold" Background="Maroon"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10">
+                    <materialDesign:PackIcon Kind="Calendar" Height="34" Width="30" Margin="0,0,5,0"/>
+                    <Button Content="Schedule" Click="Schedule_Click" FontFamily="Gill Sans MT" FontWeight="Bold" Background="Maroon"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Margin="0 10">
+            <TextBlock Text="Student Login:" FontSize="16" FontWeight="Bold" FontFamily="Gill Sans MT"/>
+                <TextBox x:Name="txtStudentLogin" FontFamily="Gill Sans MT" FontWeight="Bold"/>
+            </StackPanel>
+            <StackPanel Margin="0 10">
+                <TextBlock Text="Select Subject:" FontSize="16" FontWeight="Bold" FontFamily="Gill Sans MT"/>
+            <ComboBox x:Name="cmbSubjects" FontFamily="Gill Sans MT" FontWeight="Bold">
+                <ComboBoxItem Content="Maths"/>
+                <ComboBoxItem Content="Computing"/>
+                <ComboBoxItem Content="English"/>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Margin="0 10">
+                <TextBlock Text="Enter Grade (2-5):" FontSize="16" FontWeight="Bold" FontFamily="Gill Sans MT"/>
+            <TextBox x:Name="txtGrade" FontFamily="Gill Sans MT" FontWeight="Bold"/>
+            </StackPanel>
+            <Button Content="Submit Grade" Click="SubmitGrade_Click" FontFamily="Gill Sans MT" FontWeight="Bold" Background="Maroon" Margin="0 20"/>
+        </StackPanel>
+    </Grid>
+</Window>
